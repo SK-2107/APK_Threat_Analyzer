@@ -1,0 +1,34 @@
+{
+  "permission_rules": {
+    "android.permission.SEND_SMS": {"severity": "HIGH", "score": 15, "reason": "Can send SMS messages, which may create charges or support fraud."},
+    "android.permission.READ_SMS": {"severity": "HIGH", "score": 10, "reason": "Can read SMS messages, including verification codes."},
+    "android.permission.RECEIVE_SMS": {"severity": "MEDIUM", "score": 8, "reason": "Can receive incoming SMS messages."},
+    "android.permission.RECORD_AUDIO": {"severity": "MEDIUM", "score": 8, "reason": "Can access the device microphone."},
+    "android.permission.ACCESS_FINE_LOCATION": {"severity": "MEDIUM", "score": 8, "reason": "Can access precise location data."},
+    "android.permission.CAMERA": {"severity": "MEDIUM", "score": 6, "reason": "Can access the device camera."},
+    "android.permission.READ_CONTACTS": {"severity": "MEDIUM", "score": 8, "reason": "Can read contact information."},
+    "android.permission.INTERNET": {"severity": "LOW", "score": 2, "reason": "Allows network communication."},
+    "android.permission.ACCESS_COARSE_LOCATION": {"severity": "MEDIUM", "score": 5, "reason": "Can access approximate location data."},
+    "android.permission.READ_CALL_LOG": {"severity": "MEDIUM", "score": 8, "reason": "Can read call history."},
+    "android.permission.WRITE_CALL_LOG": {"severity": "MEDIUM", "score": 8, "reason": "Can change call history."},
+    "android.permission.READ_PHONE_STATE": {"severity": "MEDIUM", "score": 6, "reason": "Can access phone state and related device information."},
+    "android.permission.REQUEST_INSTALL_PACKAGES": {"severity": "HIGH", "score": 12, "reason": "Can request installation of application packages."},
+    "android.permission.SYSTEM_ALERT_WINDOW": {"severity": "HIGH", "score": 12, "reason": "Can display overlays above other applications."},
+    "android.permission.RECEIVE_BOOT_COMPLETED": {"severity": "LOW", "score": 3, "reason": "Can receive a device boot-completed event."}
+  },
+  "api_rules": {
+    "DexClassLoader": {"category": "Dynamic code loading", "severity": "HIGH", "score": 15, "reason": "Can load additional code at runtime."},
+    "Runtime;->exec": {"category": "Command execution", "severity": "HIGH", "score": 15, "reason": "May be used to start operating-system commands."},
+    "SmsManager": {"category": "SMS API", "severity": "HIGH", "score": 10, "reason": "Provides programmatic SMS functionality."},
+    "TelephonyManager": {"category": "Device information", "severity": "MEDIUM", "score": 7, "reason": "Can access telephone and device information."},
+    "WebView": {"category": "Web content", "severity": "LOW", "score": 3, "reason": "Can display remote web content."},
+    "PathClassLoader": {"category": "Dynamic code loading", "severity": "HIGH", "score": 12, "reason": "Can load code from a specified path."},
+    "ProcessBuilder": {"category": "Command execution", "severity": "HIGH", "score": 15, "reason": "May be used to create operating-system processes."},
+    "System;->loadLibrary": {"category": "Native library loading", "severity": "MEDIUM", "score": 7, "reason": "Loads a native library into the application."},
+    "AccessibilityService": {"category": "Accessibility API", "severity": "MEDIUM", "score": 8, "reason": "Can interact with accessibility services."},
+    "getDeviceId": {"category": "Device information", "severity": "MEDIUM", "score": 7, "reason": "May access a device identifier."},
+    "java/lang/reflect": {"category": "Reflection", "severity": "MEDIUM", "score": 6, "reason": "Uses reflection-related classes that can obscure behavior."},
+    "Base64": {"category": "Encoding pattern", "severity": "LOW", "score": 2, "reason": "Uses Base64-related encoding functionality."}
+  },
+  "suspicious_tlds": [".xyz", ".top", ".tk", ".click"]
+}

@@ -1,0 +1,1 @@
+"""Readable local report generation."""
